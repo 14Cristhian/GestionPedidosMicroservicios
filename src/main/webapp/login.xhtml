@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <h:outputStylesheet library="css" name="style.css"/>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046857.png"/>
+
+</h:head>
+<style>
+    body {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.445)), url("https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645_960_720.jpg") ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh
+    }
+</style>
+<body>
+
+<div>
+    <div class="module">
+        <h:form class="form">
+
+            <h1 class="SignIn"> Sign In</h1>
+
+            <h:inputText id="usuario"  value="#{loginForm.usuario}" class="textbox " a:placeholder="Username" autocomplete="off"/>
+
+            <h:inputSecret id="password"  value="#{loginForm.password}" class="textbox " a:placeholder="Password"/>
+
+
+            <h:messages id="globalMessage"  style="color: red;
+              margin-top: -23px;
+              margin-left: -24px;
+             margin-bottom: 5px"/>
+
+            <h:commandButton action="#{loginForm.validarUsuario()}" value="Sign In"  class="button"
+                         a:placeholder="fill me"/>
+
+            <h:commandButton action="registrar-usuario.xhtml" value="Check in"  class="button2"
+                             a:placeholder="fill me"/>
+
+        </h:form>
+    </div>
+</div>
+</body>
+</html>

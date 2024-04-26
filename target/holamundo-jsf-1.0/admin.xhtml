@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+    <title>Admin</title>
+</head>
+<h:body>
+<ui:composition template="./WEB-INF/plantillas/principal.xhtml" >
+    <ui:define name="content" >
+
+        <style>
+            body::-webkit-scrollbar{
+           width: 7px;
+                background: #5b5b5b;
+            }
+            body::-webkit-scrollbar-thumb{
+                background: #000000;
+                border-radius: 5px;
+            }
+
+            .img{
+                display:block;
+                margin:auto
+            }
+        </style>
+
+<div style="width: 100%">
+    <h:graphicImage    library="Imagenes" name="HamburguesaIncio.png" style="width: 100%; height: 350px"/>
+    <div class="container">
+        <h1 style="position: absolute; top: 300px; color: white ">Gestión De Pedidos De Comida a Domicilio</h1>
+    </div>
+</div>
+
+
+        <div class="container">
+
+            <p> Bienvenido #{loginForm.usuario}!</p>
+
+            <h2>DIAGRAMAS CASOS DE USO</h2>
+
+            <h5>PRODUCTOS:</h5>
+            <p>Este caso de uso tiene como condición que el usuario se encuentre autenticado como un administrador.
+                Desde la opción de administrar productos el admin tiene la posibilidad de gestionar un producto con las opciones de registrar modificar eliminar y consultar.
+                A la hora de realizar el registro de un producto nuevo en el sistema, se le solicitara ID  del producto, nombre, precio, cantidad y tipo.
+            </p>
+        </div>
+
+        <div class="center">
+           <h:graphicImage library="Imagenes" name="ProductoDiagrama.jpg" width="600px" height="400px" class="img"/>
+        </div>
+
+        <div class="container">
+            <h5>TIENDAS</h5>
+            <p>Este caso de uso tiene como condición que el usuario este autenticado como administrador.
+                Desde la opción de administrar tiendas, el admin tiene la posibilidad de gestionar las tiendas con las opciones de registrar, modificar, eliminar y consultar. A la hora de registrar una tienda nueva, el sistema le solicitara ID tienda, ID del municipio y dirección de la tienda.
+            </p>
+        </div>
+
+        <div class="center">
+            <h:graphicImage  library="Imagenes" name="TiendasGrafico.png" width="600px" height="400px" class="img"/>
+        </div>
+
+        <div class="container">
+            <h5>CATEGORIAS</h5>
+            <p>La aplicación le permitirá al usuario que este autenticado como administrador que realice gestión de categorías como registrar categoría, modificar, eliminar y consultar. A la hora de realizar el registro de una nueva categoría la aplicación le solicitara
+                al administrador ingresar ID categoría y el nombre de la categoría.</p>
+        </div>
+
+        <div class="center">
+            <h:graphicImage   library="Imagenes" name="CategoriasDiagrama.jpg" width="600px" height="400px" class="img"/>
+        </div>
+
+        <div class="container">
+            <h5>PEDIDOS</h5>
+            <p>
+                Este caso de uso tiene como condición que el usuario se encuentre autenticado como un administrador.
+                Desde la opción de gestionar pedido el admin tiene la posibilidad de gestionar un pedido con las opciones de registrar modificar eliminar y consultar.
+                A la hora de realizar el registro de un pedido nuevo en el sistema, se le solicitara ID  del pedido, ID tienda, fecha y hora y precio total.
+            </p>
+        </div>
+
+        <div class="center">
+            <h:graphicImage  library="Imagenes" name="PedidosDiagrama.png" width="600px" height="400px" class="img"/>
+        </div>
+
+        <div class="container">
+            <h5>EMPLEADOS</h5>
+            <p>La aplicación le permitirá al usuario que este autenticado como administrador que realice gestión de empleados como registrar, modificar, eliminar y consultar.
+                A la hora de realizar el registro de un nuevo empleado la aplicación le solicitara al administrador ingresar ID empleado, ID tienda, ID municipio, apellido y nombre del empleado.
+            </p>
+        </div>
+
+        <div class="center">
+            <h:graphicImage  library="Imagenes" name="EmpleadoDiagrama.jpg" width="600px" height="400px" class="img"/>
+        </div>
+
+        <div class="container">
+            <h5>MUNICIPIOS</h5>
+            <p>Desde la opción de gestionar municipios el admin tiene la posibilidad de gestionar un municipio con las opciones de registrar modificar eliminar y consultar.
+                A la hora de realizar el registro de un municipio nuevo en el sistema, se le solicitara ID  municipio, ID departamento, nombre.
+            </p>
+        </div>
+
+        <div class="center">
+            <h:graphicImage  library="Imagenes" name="MunicipioDiagrama.jpg" width="600px" height="400px" class="img"/>
+        </div>
+
+        <div class="container">
+            <h5>DEPARTAMENTOS</h5>
+            <p>Desde la opción de gestionar departamentos el admin tiene la posibilidad de gestionar un departamento con las opciones de registrar modificar eliminar y consultar.
+                A la hora de realizar el registro de un departamento nuevo en el sistema, se le solicitara ID departamento, nombre.
+            </p>
+        </div>
+
+        <div class="center">
+            <h:graphicImage  library="Imagenes" name="MunicipioDiagrama.jpg" width="600px" height="400px" class="img"/>
+        </div>
+
+    </ui:define>
+</ui:composition>
+</h:body>
+</html>

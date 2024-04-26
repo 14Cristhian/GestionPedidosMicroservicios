@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <meta charset="UTF-8"/>
+  <title>Comida</title>
+  <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/1755/premium/1755249.png?token=exp=1636237040~hmac=99fee20940918b7b136064d791864fe6"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</h:head>
+<h:body>
+  <h:form>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid" aria-label="Third navbar example" >
+      <div class="container-fluid">
+        <img src="https://cdn-icons-png.flaticon.com/512/3094/3094903.png"
+             height="40px" width="40px" style="margin-right: 6px"/> <h:commandLink class="navbar-brand" action="admin.xhtml?faces-redirect=true">Proyecto</h:commandLink>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admin.xhtml?faces-redirect=true">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Opcion</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                 aria-expanded="false" >Menu</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li>
+                    <h:commandLink class="dropdown-item " action="listar-usuarios.xhtml?faces-redirect=true">Usuarios</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-cliente.xhtml?faces-redirect=true">Cliente</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-ciudades.xhtml?faces-redirect=true">Municipios</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-departamento.xhtml?faces-redirect=true">Departamento</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-categoria.xhtml?faces-redirect=true">Categorias</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-tienda.xhtml?faces-redirect=true">Tiendas</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-pedido.xhtml?faces-redirect=true">Pedidos</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-producto.xhtml?faces-redirect=true">Productos</h:commandLink>
+                </li>
+                <li>
+                  <h:commandLink class="dropdown-item" action="listar-empleado.xhtml?faces-redirect=true">Empleados</h:commandLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="btn-group dropstart">
+            <ul class="navbar-nav mb-2 mb-sm-0 navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                  #{loginForm.usuario}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                  <li class="dropdown-item">
+                    <h:commandLink action="#{loginForm.logout}">Cerrar Sesion</h:commandLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </h:form>
+  <div class="">
+    <ui:insert name="content">Contenido</ui:insert>
+  </div>
+</h:body>
+</html>

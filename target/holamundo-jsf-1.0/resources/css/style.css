@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:helvetica;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.445)),url("../../Imagenes/Pizza.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Cubrir  toda la pantalla */
+    background-size: cover;
+}
+
+.SignIn{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+.module{
+    position:relative;
+    height:80%;
+    width:450px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+
+}
+
+.module ul{
+    list-style-type:none;
+    margin:0;
+}
+
+.form{
+    float:left;
+    margin-top: 30%;
+    height:86%;
+    width:100%;
+    box-sizing:border-box;
+    padding:40px;
+    border-radius: 19px;
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+
+
+.textbox{
+    height:50px;
+    width:100%;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding:10px;
+    margin-bottom:30px;
+    color: white;
+    background-color: Transparent;
+}
+
+
+
+.textbox:hover{
+    border-bottom: 1px solid white;
+
+}
+
+.textbox:focus{
+    outline: none;
+}
+
+
+
+
+.button{
+    height:50px;
+    width:100%;
+    border-radius:3px;
+    border:rgba(0,0,0,.3) 0px solid;
+    box-sizing:border-box;
+    padding:10px;
+    margin-bottom:14px;
+    background: rgb(31, 135, 252);
+    color:#FFF;
+    font-weight:bold;
+    font-size: 12pt;
+    transition:background .4s;
+    cursor:pointer;
+}
+
+.button2{
+    height:50px;
+    width:100%;
+    border-radius:3px;
+    border:rgba(0,0,0,.3) 0px solid;
+    box-sizing:border-box;
+    padding:10px;
+    margin-bottom:14px;
+    background: #0be156;
+    color:#FFF;
+    font-weight:bold;
+    font-size: 12pt;
+    transition:background .4s;
+    cursor:pointer;
+}
+
+
+/*headings*/
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    padding: 20px 30px;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    padding: 20px 30px;
+}
